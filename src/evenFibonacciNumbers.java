@@ -6,12 +6,12 @@
 //
 //Найдите сумму всех четных элементов ряда Фибоначчи, которые не превышают четыре миллиона.
 
-public class еvenFibonacciNumbers {
+public class evenFibonacciNumbers {
     public static void main(String[] args) {
         int sum = 0;
         int indexZero = 1;
         int indexOne = 1;
-        int tmp = 0;
+        int tmp;
 
         while (indexOne < 4000000) {
             if (indexOne % 2 == 0) {
