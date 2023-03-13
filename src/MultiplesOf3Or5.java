@@ -5,7 +5,7 @@
 //
 //Найдите сумму всех чисел меньше 1000, кратных 3 или 5.
 
-public class multiplesOf3Or5 {
+public class MultiplesOf3Or5 {
     public static void main(String[] args) {
         int sum = 0;
         int maxInt = 1000;

@@ -4,7 +4,7 @@
 //
 //Каков самый большой делитель числа 600851475143, являющийся простым числом?
 
-public class largestPrimeFactor {
+public class LargestPrimeFactor {
     public static void main(String[] args) {
         double number = 600851475143.0;
         double sqrtOfNum = Math.sqrt(number);
