@@ -20,14 +20,10 @@ public class SixthProblem {
 
         for (int i = 1; i <= num; i++) {
             sumOfSquare += i * i;
-        }
-
-        for (int i = 1; i <= num; i++) {
             squareOfSum += i;
         }
-        squareOfSum *= squareOfSum;
 
-        difference = squareOfSum - sumOfSquare;
+        difference = (squareOfSum * squareOfSum) - sumOfSquare;
 
         System.out.println(difference);
     }
