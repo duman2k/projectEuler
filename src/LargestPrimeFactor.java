@@ -9,24 +9,24 @@ public class LargestPrimeFactor {
         double number = 600851475143.0;
         double sqrtOfNum = Math.sqrt(number);
 
-        for (long i = 2L; i <= Math.sqrt(number); i++) {
+        for (long i = 2; i <= sqrtOfNum; i++) {
             if (number % i == 0) {
-                if (isPrimeFactor(i)) {
+                if (isPrimeNumber(i)) {
                     System.out.println(i + " ");
                 }
             }
         }
     }
 
-    public static boolean isPrimeFactor(long number) {
+    //Простые числа не могут быть четными кроме 2
+    //Делители числа не могут больше чем его квадратный корень
+    public static boolean isPrimeNumber(long number) {
         int count = 0;
+        int sqrtOfNum = (int)Math.sqrt(number);
 
-        for (long i = 1L; i < number; i++) {
-            if (number % i == 0) {
-                count++;
-            }
-            if (count > 1)
-                return false;
+        for (long i = 1; i <= sqrtOfNum; i++) {
+            if (number % i == 0) count++;
+            if (count > 1) return false;
         }
 
         return true;
