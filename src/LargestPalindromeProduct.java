@@ -15,45 +15,30 @@ public class LargestPalindromeProduct {
         for (int i = 999; i > 99 ; i--) {
             for (int j = i; j > 99; j--) {
                 number = i * j;
-                if (isPalindrome(numberToDigits(number))) {
+                if (isPalindrome(number)) {
                     if (biggestPalindrome < number) {
                         biggestPalindrome = number;
                     }
-                    //System.out.println(i + " * " + j + " = " + number);
+                    System.out.println(i + " * " + j + " = " + number);
                 }
             }
         }
+
         System.out.println(biggestPalindrome);
     }
 
-    //Функция возвращает массив с цифрами числа
-    public static ArrayList<Integer> numberToDigits (int number) {
-        ArrayList<Integer> digits = new ArrayList();
-
-        int smallDivider = 1;
-        int bigDivider = 10;
-        int digit;
-
-        while (number > bigDivider / 10) {
-            digit = (number % bigDivider) / smallDivider;
-            digits.add(digit);
-
-            smallDivider *= 10;
-            bigDivider *= 10;
-        }
-
-        return digits;
-    }
     //Функция проверяет является ли число палиндромом и возвращает true либо false
-    public static boolean isPalindrome(ArrayList<Integer> number) {
-        int size = number.size();
+    public static boolean isPalindrome(int number) {
+        int reversedNum = 0;
+        int dublicate = number;
 
-        for (int i = 0; i < size/2; i++) {
-            if (number.get(i) != number.get(size - 1 - i)) {
-                return false;
-            }
+        while (number != 0) {
+            reversedNum = reversedNum * 10 + number % 10;
+            number /= 10;
         }
 
+        if (dublicate != reversedNum) return false;
         return true;
+
     }
 }
