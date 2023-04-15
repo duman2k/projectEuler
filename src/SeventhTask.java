@@ -10,10 +10,12 @@ public class SeventhTask {
         int count = 0;
         for (int i = 1; ; i+=2) {
             if (isPrimeNumber(i)) {
-                System.out.println(i);
                 count++;
             }
-            if (count == 10001) break;
+            if (count == 10001) {
+                System.out.println(i);
+                break;
+            }
         }
     }
 
